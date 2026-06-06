@@ -1,6 +1,22 @@
 import { Building2, Image } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function AboutPage() {
+  const keywords = [
+    'coconut shell charcoal',
+    'coconut shell charcoal manufacturers',
+    'coconut shell charcoal briquettes',
+    'shisha briquettes',
+    'hookah charcoal',
+  ];
+
+  const seo = {
+    title: 'About Abiman & Company — Coconut Shell Charcoal Manufacturers',
+    description:
+      'Abiman & Company manufactures premium coconut shell charcoal shisha briquettes for international export — OEM, private-label, and bulk supply options.',
+    keywords,
+    url: typeof window !== 'undefined' ? `${window.location.origin}/about` : undefined,
+  };
   const galleryImages = [
     'WhatsApp Image 2026-04-27 at 10.52.25 PM.jpeg',
     'WhatsApp Image 2026-04-27 at 10.52.26 PM (1).jpeg',
@@ -10,6 +26,7 @@ export default function AboutPage() {
 
   return (
     <div className="bg-zinc-950 pt-20">
+      <Seo {...seo} />
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">

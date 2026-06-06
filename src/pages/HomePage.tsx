@@ -1,4 +1,5 @@
 import { ArrowRight, Leaf, Flame, Clock, Sparkles, Globe, Package, Shield } from 'lucide-react';
+import Seo from '../components/Seo';
 import { useState } from 'react';
 
 interface HomePageProps {
@@ -6,6 +7,21 @@ interface HomePageProps {
 }
 
 export default function HomePage({ onNavigate }: HomePageProps) {
+  const keywords = [
+    'coconut shell charcoal',
+    'coconut shell charcoal manufacturers',
+    'coconut shell charcoal briquettes',
+    'shisha briquettes',
+    'hookah charcoal',
+  ];
+
+  const seo = {
+    title: 'Coconut Shell Shisha Briquettes — Abiman & Company',
+    description:
+      'Premium coconut shell charcoal briquettes for shisha and hookah — long burn time, low ash, export-grade. OEM and private label available.',
+    keywords,
+    url: typeof window !== 'undefined' ? window.location.origin : undefined,
+  };
   const [waOpen, setWaOpen] = useState(false);
   const WHATSAPP_NUMBER = '+91 8300596735'; // replace with your WhatsApp number in international format
   const waDigits = WHATSAPP_NUMBER.replace(/\D/g, '');
@@ -16,6 +32,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div className="bg-zinc-950">
+      <Seo {...seo} />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAgNGgtMnYyaDJ2LTJ6bTAtOGgydi0yaC0ydjJ6bS0yLTJoLTJ2Mmgydi0yem00LTRoMnYtMmgtMnYyem0wIDhoLTJ2Mmgydi0yem0wLTRoMnYtMmgtMnYyem0tNiAwaDJ2LTJoLTJ2MnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>

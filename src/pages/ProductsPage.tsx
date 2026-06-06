@@ -1,8 +1,25 @@
 import { Package, Flame, Droplet, Wind, Box, FileCheck } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function ProductsPage() {
+  const keywords = [
+    'coconut shell charcoal',
+    'coconut shell charcoal manufacturers',
+    'coconut shell charcoal briquettes',
+    'shisha briquettes',
+    'hookah charcoal',
+  ];
+
+  const seo = {
+    title: 'Coconut Shell Charcoal Briquettes — Products',
+    description:
+      'Export-grade coconut shell charcoal briquettes for shisha and hookah with long burn time and low ash — available in 25mm cubes and bulk packaging.',
+    keywords,
+    url: typeof window !== 'undefined' ? `${window.location.origin}/products` : undefined,
+  };
   return (
     <div className="bg-zinc-950 pt-20">
+      <Seo {...seo} />
       <section className="py-20 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

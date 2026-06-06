@@ -1,4 +1,5 @@
 import { Users, Mail, Phone } from 'lucide-react';
+import Seo from '../components/Seo';
 
 interface TeamMember {
   id: string;
@@ -30,8 +31,23 @@ const teamMembers: TeamMember[] = [
 ];
 
 export default function OurTeamPage() {
+  const keywords = [
+    'coconut shell charcoal',
+    'coconut shell charcoal manufacturers',
+    'coconut shell charcoal briquettes',
+    'shisha briquettes',
+    'hookah charcoal',
+  ];
+
+  const seo = {
+    title: 'Our Team — Abiman & Company',
+    description: 'Meet the team behind our premium coconut shell charcoal briquettes manufacturing and export operations.',
+    keywords,
+    url: typeof window !== 'undefined' ? `${window.location.origin}/our-team` : undefined,
+  };
   return (
     <div className="bg-zinc-950 pt-20">
+      <Seo {...seo} />
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}

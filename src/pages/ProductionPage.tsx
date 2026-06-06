@@ -1,6 +1,21 @@
 import { Leaf, Flame, Package, Box, Droplet, FileCheck, MapPin, Archive } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function ProductionPage() {
+  const keywords = [
+    'coconut shell charcoal',
+    'coconut shell charcoal manufacturers',
+    'coconut shell charcoal briquettes',
+    'shisha briquettes',
+    'hookah charcoal',
+  ];
+
+  const seo = {
+    title: 'Production Process — Coconut Shell Charcoal Briquettes',
+    description: 'Detailed production process for high-quality coconut shell charcoal shisha briquettes — carbonization, briquetting, drying, testing and packaging.',
+    keywords,
+    url: typeof window !== 'undefined' ? `${window.location.origin}/production` : undefined,
+  };
   const steps = [
     {
       id: 1,
@@ -60,6 +75,7 @@ export default function ProductionPage() {
 
   return (
     <div className="bg-zinc-950 pt-20">
+      <Seo {...seo} />
       <section className="py-20 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
