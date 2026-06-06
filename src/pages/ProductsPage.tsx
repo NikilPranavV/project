@@ -101,7 +101,7 @@ export default function ProductsPage() {
                     { label: 'Ash Content', value: '≤ 2.5%' },
                     { label: 'Moisture', value: '< 5%' },
                     { label : 'Ash Color', value: 'Light Gray & White' },
-                  ].map((item, index) => (
+                    ].map((item, index) => (
                     <div key={index} className="flex justify-between items-center border-b border-zinc-800 pb-3">
                       <span className="text-zinc-400 font-medium">{item.label}</span>
                       <span className="text-white font-semibold">{item.value}</span>

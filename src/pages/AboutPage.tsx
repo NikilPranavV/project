@@ -134,6 +134,7 @@ export default function AboutPage() {
                       <img 
                         src={`/images/gallery/${image}`} 
                         alt={`Gallery ${index + 1}`}
+                        loading="lazy"
                         className="w-full h-64 object-cover hover:scale-105 transition-transform"
                       />
                     </div>

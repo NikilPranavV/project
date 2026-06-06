@@ -71,6 +71,7 @@ export default function OurTeamPage() {
                   <img
                     src={member.image}
                     alt={member.name}
+                    loading="lazy"
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
                 ) : (
