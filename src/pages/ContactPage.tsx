@@ -29,7 +29,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-white font-bold mb-2">Email</h3>
-                <p className="text-zinc-400 mb-4">abimancompanypmg@gmail.com</p>
+                <p className="text-zinc-400 mb-4">info@abimanbriquettes.com</p>
 
                 <h3 className="text-white font-bold mb-2">Phone</h3>
                 <p className="text-zinc-400 mb-4">+91 8300596735</p>

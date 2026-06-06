@@ -330,7 +330,7 @@ export default function ProductsPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
-              href="mailto:export@coconutchar.com"
+              href="mailto:info@abimanbriquettes.com"
               className="bg-gradient-to-r from-amber-600 to-orange-700 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-orange-800 transition-all shadow-lg shadow-orange-900/30"
             >
               Email Us

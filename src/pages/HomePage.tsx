@@ -36,6 +36,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
     "contactPoint": [{
       "@type": "ContactPoint",
       "telephone": "+91 8300596735",
+      "email": "info@abimanbriquettes.com",
       "contactType": "customer service",
       "areaServed": "IN"
     }]

@@ -37,9 +37,9 @@ export default function Footer({ onNavigate }: { onNavigate: (page: string) => v
           <div>
             <h3 className="text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-zinc-400 text-sm">
+                <li className="flex items-start space-x-3 text-zinc-400 text-sm">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-600" />
-                <span>abimancompanypmg@gmail.com</span>
+                <a href="mailto:info@abimanbriquettes.com" className="text-zinc-300 hover:text-amber-500 text-sm">info@abimanbriquettes.com</a>
               </li>
               <li className="flex items-start space-x-3 text-zinc-400 text-sm">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-600" />

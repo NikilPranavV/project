@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "optimize-images": "node scripts/optimize-images.js public/images public/images-optimized",
-    "lighthouse-audit": "echo \"Run Lighthouse locally against preview server: npm run preview then run Lighthouse CLI or use Chrome DevTools\""
+    "lighthouse-audit": "echo \"Run Lighthouse locally against preview server: npm run preview then run Lighthouse CLI or use Chrome DevTools\"",
+    "build:prerender": "npm run build && node scripts/prerender.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
@@ -34,6 +35,9 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
-    "vite": "^5.4.2"
+    "vite": "^5.4.2",
+    "puppeteer": "^21.3.8",
+    "serve-handler": "^6.1.3",
+    "sharp": "^0.32.4"
   }
 }
