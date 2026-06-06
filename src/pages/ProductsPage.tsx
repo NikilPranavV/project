@@ -17,9 +17,49 @@ export default function ProductsPage() {
     keywords,
     url: typeof window !== 'undefined' ? `${window.location.origin}/products` : undefined,
   };
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Coconut Shell Shisha Briquettes",
+    "image": [
+      typeof window !== 'undefined' ? `${window.location.origin}/images/gallery/WhatsApp%20Image%202026-04-27%20at%2010.52.25%20PM.jpeg` : 'https://example.com/images/gallery/sample.jpg'
+    ],
+    "description": seo.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "Abiman & Company"
+    },
+    "sku": "AB-25CUBE",
+    "offers": {
+      "@type": "Offer",
+      "url": typeof window !== 'undefined' ? `${window.location.origin}/products` : 'https://example.com/products',
+      "priceCurrency": "USD",
+      "price": "0.00",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": typeof window !== 'undefined' ? window.location.origin : 'https://example.com'
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": typeof window !== 'undefined' ? `${window.location.origin}/products` : 'https://example.com/products'
+      }
+    ]
+  };
   return (
     <div className="bg-zinc-950 pt-20">
-      <Seo {...seo} />
+      <Seo {...seo} jsonLd={[productJsonLd, breadcrumbJsonLd]} />
       <section className="py-20 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
