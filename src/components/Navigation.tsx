@@ -8,6 +8,7 @@ interface NavigationProps {
 
 export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -25,15 +26,35 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div
-            className="flex items-center space-x-3 cursor-pointer group"
+            className="flex items-center space-x-1 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="bg-gradient-to-br from-amber-600 to-orange-700 p-2.5 rounded-lg group-hover:scale-110 transition-transform">
-              <Flame className="w-7 h-7 text-white" />
+            <div
+              className="p-1 rounded-lg group-hover:scale-110 transition-transform"
+              style={{
+                backgroundImage: "url('/images/logo/mosaic-pattern.svg')",
+                backgroundSize: '64px 64px',
+                backgroundRepeat: 'repeat',
+                padding: 6,
+                borderRadius: 8,
+              }}
+            >
+              {!logoLoaded && (
+                <div className="bg-gradient-to-br from-amber-600 to-orange-700 p-2.5 rounded-lg">
+                  <Flame className="w-12 h-12 text-white" />
+                </div>
+              )}
+              <img
+                src="/images/logo/Logo%20-%20Abiman_page-0001.svg"
+                alt="ABIMAN AND COMPANY"
+                className={logoLoaded ? 'w-28 h-28 sm:w-32 sm:h-32 object-contain block' : 'w-28 h-28 sm:w-32 sm:h-32 object-contain hidden'}
+                onLoad={() => setLogoLoaded(true)}
+                onError={() => setLogoLoaded(false)}
+              />
             </div>
-            <div>
-              <div className="text-white font-bold text-xl tracking-tight">ABIMAN AND COMPANY</div>
-              <div className="text-zinc-400 text-xs tracking-wider">PREMIUM BRIQUETTES</div>
+            <div className="ml-1">
+              <div className="text-white font-bold text-xl tracking-tight uppercase">ABIMAN AND COMPANY</div>
+              <div className="text-zinc-400 text-xs tracking-wider uppercase">PREMIUM BRIQUETTES</div>
             </div>
           </div>
 

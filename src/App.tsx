@@ -9,6 +9,9 @@ import QualityPage from './pages/QualityPage';
 import PackagingPage from './pages/PackagingPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import ExportTerms from './pages/ExportTerms';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -35,6 +38,12 @@ function App() {
         return <FAQPage />;
       case 'contact':
         return <ContactPage />;
+      case 'privacy':
+        return <PrivacyPolicy />;
+      case 'terms':
+        return <TermsOfService />;
+      case 'export-terms':
+        return <ExportTerms />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;
     }

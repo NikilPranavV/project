@@ -55,12 +55,30 @@ export default function Footer({ onNavigate }: { onNavigate: (page: string) => v
 
         <div className="border-t border-zinc-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-zinc-500 text-sm">
-            © 2024 Coconut Char. All rights reserved.
+            © {new Date().getFullYear()} ABIMAN AND COMPANY. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-zinc-500 hover:text-amber-500 text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-zinc-500 hover:text-amber-500 text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-zinc-500 hover:text-amber-500 text-sm transition-colors">Export Terms</a>
+            <button
+              onClick={() => onNavigate('privacy')}
+              className="text-zinc-500 hover:text-amber-500 text-sm transition-colors"
+              aria-label="Privacy Policy"
+            >
+              Privacy Policy
+            </button>
+            <button
+              onClick={() => onNavigate('terms')}
+              className="text-zinc-500 hover:text-amber-500 text-sm transition-colors"
+              aria-label="Terms of Service"
+            >
+              Terms of Service
+            </button>
+            <button
+              onClick={() => onNavigate('export-terms')}
+              className="text-zinc-500 hover:text-amber-500 text-sm transition-colors"
+              aria-label="Export Terms"
+            >
+              Export Terms
+            </button>
           </div>
         </div>
       </div>
