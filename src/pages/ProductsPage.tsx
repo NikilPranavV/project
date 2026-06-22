@@ -57,9 +57,31 @@ export default function ProductsPage() {
       }
     ]
   };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are common packaging options?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 1kg retail boxes, 10kg cartons, 20kg master cartons, and container palletization for bulk orders."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer private labeling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we provide white-label manufacturing and custom branding for large orders. Contact sales for MOQ and pricing."
+        }
+      }
+    ]
+  };
   return (
     <div className="bg-zinc-950 pt-20">
-      <Seo {...seo} jsonLd={[productJsonLd, breadcrumbJsonLd]} />
+      <Seo {...seo} jsonLd={[productJsonLd, breadcrumbJsonLd, faqJsonLd]} />
       <section className="py-20 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
